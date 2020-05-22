@@ -1,0 +1,27 @@
+{
+  "name": "static_node_and_express_site-v1",
+  "version": "1.0.0",
+  "description": "project 6 json file",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "project-6"
+  },
+  "keywords": [
+    "static",
+    "node",
+    "and",
+    "express",
+    "site"
+  ],
+  "author": "anne brown",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pkg": "^4.4.8",
+    "pug": "^2.0.4"
+  }
+}
