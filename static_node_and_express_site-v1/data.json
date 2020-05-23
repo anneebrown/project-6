@@ -1,0 +1,48 @@
+{
+    "projects": [{
+        "id": "0",
+        "project_name": "Random Quote Generator",
+        "description": "A random quote is printed to the page from a an array of quote objects",
+        "technologies": "['javascript', 'HTML', 'CSS']",
+        "live_link": "https://anneebrown.github.io/project-1/",
+        "github_link": "https://github.com/anneebrown/project-1",
+        "image_urls": "['/images/randomquote1.jpeg', '/images/randomquote2.jpeg', '/images/randomquote3.jpeg']"
+      },
+      {
+        "id": "1",
+        "project_name": "List Pagination and Filtering",
+        "description": "A list of students is paginated. A search function is implemented to search for a specific student",
+        "technologies": "['javascript', 'HTML', 'CSS']",
+        "live_link": "https://anneebrown.github.io/project-2-4/",
+        "github_link": "https://github.com/anneebrown/project-2-4",
+        "image_urls": "['/images/pagination1.jpeg', '/images/pagination1.jpeg', '/images/pagination1.jpeg']"
+      },
+      {
+        "id": "2",
+        "project_name": "Interactive Form, including validation",
+        "description": "An interactive sign up form for a fictional tech conference. The form checks for valid entries, and disabled options, depending on user input",
+        "technologies": "['javascript', 'HTML', 'CSS', 'regex']",
+        "live_link": "https://anneebrown.github.io/project-3/",
+        "github_link": "https://github.com/anneebrown/project-3",
+        "image_urls": "['/images/validation1.jpeg', '/images/validation2.jpeg', '/images/validation3.jpeg']"
+      },
+      {
+        "id": "3",
+        "project_name": "Phrase Hunter Game",
+        "description": "An exercise in object oriented JavaScript, building a phrase hunter game with multiple classes",
+        "technologies": "['javascript', 'HTML', 'CSS']",
+        "live_link": "https://anneebrown.github.io/project-4/",
+        "github_link": "https://github.com/anneebrown/project-4",
+        "image_urls": "['/images/phrasehunter1.jpeg', '/images/phrasehunter2.jpeg', '/images/phrasehunter3.jpeg', '/images/phrasehunter4.jpeg']"
+      },
+      {
+        "id": "4",
+        "project_name": "Random User API",
+        "description": "Pulling data from a random user generator API to fill a directory of a fictional awesome startup company. Clicking on each user opens a window with more information.",
+        "technologies": "['javascript', 'HTML', 'CSS', 'API']",
+        "live_link": "https://anneebrown.github.io/project-5/",
+        "github_link": "https://github.com/anneebrown/project-5",
+        "image_urls": "['/images/randomuserapi1.jpeg', '/images/randomuserapi2.jpeg']"
+      }
+    ]
+  }
