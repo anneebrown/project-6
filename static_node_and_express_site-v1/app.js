@@ -20,19 +20,27 @@ app.get('/about', (req, res) => {
     res.render('about');
 })
 
-app.get('/:id', (req, res) => {
-    const { id } = req.params; 
+app.get('/projects/:id', (req, res) => {
+    const {id} = req.params.id; 
+    console.log(dataJSON[7])
+    if (dataJSON[`${id}`]) {
     res.locals.dataJSON = dataJSON[`${id}`];
-    //console.log(dataJSON[0])
     res.render('project');
-    console.log(typeof id)
+    } else {
+        (req, res, next) => {
+        const err = new Error('Not Found');
+        err.status = 404;
+        next(err);
+    }
+
+    }
 })
 
-  app.use((req, res, next) => {
-    const err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-})
+//   app.use((req, res, next) => {
+//     const err = new Error('Not Found');
+//     err.status = 404;
+//     next(err);
+// })
 
 app.use( (err, req, res, next) => {
     res.locals.err = err;
