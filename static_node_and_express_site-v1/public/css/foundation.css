@@ -170,7 +170,7 @@ dfn {
      * Add the correct background and color in IE 9-.
      */
 mark {
-  background-color: #ff0;
+  background-color: rgb(235, 199, 101);
   color: #000; }
 
 /**
