@@ -12,7 +12,7 @@ app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.locals.dataJSON = dataJSON;
-    //console.log(dataJSON[0].technologies[1]);
+    //console.log(dataJSON);
     res.render('index');
 })
 
@@ -21,26 +21,17 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/projects/:id', (req, res) => {
-    const {id} = req.params.id; 
-    console.log(dataJSON[7])
-    if (dataJSON[`${id}`]) {
+    const { id } = req.params.id; 
+    console.log({id});
     res.locals.dataJSON = dataJSON[`${id}`];
     res.render('project');
-    } else {
-        (req, res, next) => {
-        const err = new Error('Not Found');
-        err.status = 404;
-        next(err);
-    }
-
-    }
 })
 
-//   app.use((req, res, next) => {
-//     const err = new Error('Not Found');
-//     err.status = 404;
-//     next(err);
-// })
+app.use((req, res, next) => {
+    const err = new Error('Sorry, something went wrong!');
+    err.status = 404;
+    next(err);
+})
 
 app.use( (err, req, res, next) => {
     res.locals.err = err;

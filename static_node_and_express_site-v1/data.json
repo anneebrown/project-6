@@ -2,7 +2,7 @@
     "projects": [{
         "id": "0",
         "project_name": "Random Quote Generator",
-        "description": "A random quote is printed to the page from a an array of quote objects",
+        "description": "A random quote is printed to the page from an array of quote objects",
         "technologies": ["javascript", "HTML", "CSS"],
         "live_link": "https://anneebrown.github.io/project-1/",
         "github_link": "https://github.com/anneebrown/project-1",
