@@ -10,23 +10,33 @@ app.set('view engine', 'pug');
 app.use(express.static('public'));
 
 
+//home rout
 app.get('/', (req, res) => {
     res.locals.dataJSON = dataJSON;
     //console.log(dataJSON);
     res.render('index');
 })
 
+//about route
 app.get('/about', (req, res) => {
     res.render('about');
 })
 
-app.get('/projects/:id', (req, res) => {
-    const { id } = req.params.id; 
-    console.log({id});
+//projects route, sends the user to the error handler if the project entered doesn't exist
+app.get('/projects/:id', (req, res, next) => {
+    const id = req.params.id; 
+    console.log(id);
+    if (id <= 4) {
     res.locals.dataJSON = dataJSON[`${id}`];
     res.render('project');
+    } else {
+        const err = new Error('Sorry, something went wrong!');
+        err.status = 404;
+        next(err);
+    }
 })
 
+//error handler
 app.use((req, res, next) => {
     const err = new Error('Sorry, something went wrong!');
     err.status = 404;
